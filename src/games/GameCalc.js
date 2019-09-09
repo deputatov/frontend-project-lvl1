@@ -1,7 +1,4 @@
-#!/usr/bin/env node
-
-import brainGames from '../brain-games';
-import { getRandomInt } from '../mathFunc';
+import { getRandomInt } from '../lib/mylib';
 
 const getRandomQuestionAndCorrectAnswer = () => {
   const n = getRandomInt(0, 3);
@@ -20,4 +17,4 @@ const gameData = {
   getQuestionAnswer: getRandomQuestionAndCorrectAnswer,
 };
 
-brainGames(gameData);
+export default gameData;

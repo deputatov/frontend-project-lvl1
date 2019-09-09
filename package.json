@@ -1,13 +1,15 @@
 {
   "name": "frontend-project-lvl1-deputatovn",
-  "version": "5.0.1",
+  "version": "6.0.0",
   "description": "project brain games",
   "main": "src/bin/index.js",
   "bin": {
-    "brain-games": "dist/bin/index.js",
-    "brain-even": "dist/bin/games/brain-even.js",
-    "brain-calc": "dist/bin/games/brain-calc.js",
-    "brain-gcd": "dist/bin/games/brain-gcd.js"
+    "brain-games": "dist/bin/brain-games.js",
+    "brain-even": "dist/bin/brain-even.js",
+    "brain-calc": "dist/bin/brain-calc.js",
+    "brain-gcd": "dist/bin/brain-gcd.js",
+    "brain-progression": "dist/bin/brain-progression.js",
+    "brain-prime": "dist/bin/brain-prime.js"
   },
   "files": [
     "dist"
