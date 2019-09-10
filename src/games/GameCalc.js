@@ -1,15 +1,22 @@
 import { getRandomInt } from '../lib/mylib';
 
 const getRandomQuestionAndCorrectAnswer = () => {
-  const n = getRandomInt(0, 3);
-  const operand1 = getRandomInt(1, 21);
-  const operand2 = getRandomInt(1, 16);
+  const minOperationIndex = 0;
+  const maxOperationIndex = 3;
+  const indRandomOperation = getRandomInt(minOperationIndex, maxOperationIndex);
+
+  const minValue = 0;
+  const maxValue = 20;
+  const randomInt1 = getRandomInt(minValue, maxValue);
+  const randomInt2 = getRandomInt(minValue, maxValue);
+
   const operations = [
-    [`${operand1} + ${operand2}`, (operand1 + operand2).toString()],
-    [`${operand1} - ${operand2}`, (operand1 - operand2).toString()],
-    [`${operand1} * ${operand2}`, (operand1 * operand2).toString()],
+    [`${randomInt1} + ${randomInt2}`, (randomInt1 + randomInt2).toString()],
+    [`${randomInt1} - ${randomInt2}`, (randomInt1 - randomInt2).toString()],
+    [`${randomInt1} * ${randomInt2}`, (randomInt1 * randomInt2).toString()],
   ];
-  return operations[n];
+
+  return operations[indRandomOperation];
 };
 
 const gameData = {

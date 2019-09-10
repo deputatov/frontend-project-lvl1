@@ -8,9 +8,15 @@ const gcd = (a, b) => {
 };
 
 const getRandomQuestionAndCorrectAnswer = () => {
-  const a = getRandomInt(40, 51);
-  const b = getRandomInt(5, 21);
-  return [`${a} ${b}`, gcd(a, b).toString()];
+  const minValue1 = 40;
+  const maxValue1 = 50;
+  const randomInt1 = getRandomInt(minValue1, maxValue1);
+
+  const minValue2 = 5;
+  const maxValue2 = 20;
+  const randomInt2 = getRandomInt(minValue2, maxValue2);
+
+  return [`${randomInt1} ${randomInt2}`, gcd(randomInt1, randomInt2).toString()];
 };
 
 const gameData = {

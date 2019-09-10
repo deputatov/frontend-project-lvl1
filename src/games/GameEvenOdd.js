@@ -1,8 +1,10 @@
 import { getRandomInt, isEven } from '../lib/mylib';
 
 const getRandomQuestionAndCorrectAnswer = () => {
-  const num = getRandomInt(1, 101);
-  return [num, isEven(num) ? 'yes' : 'no'];
+  const minValue = 0;
+  const maxValue = 100;
+  const randomInt = getRandomInt(minValue, maxValue);
+  return [randomInt, isEven(randomInt) ? 'yes' : 'no'];
 };
 
 const gameData = {

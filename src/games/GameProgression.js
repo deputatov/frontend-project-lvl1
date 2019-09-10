@@ -6,9 +6,9 @@ const getRandomArray = (filler, inc, len = 10) => Array(len)
 
 const getRandomQuestionAndCorrectAnswer = () => {
   const filler = getRandomInt(1, 11);
-  const inc = getRandomInt(1, 8);
+  const increment = getRandomInt(1, 8);
   const gapIndex = getRandomInt(0, 10);
-  const arr = getRandomArray(filler, inc);
+  const arr = getRandomArray(filler, increment);
   const correctAnswer = arr[gapIndex];
   arr[gapIndex] = '..';
   return [arr.join(' '), correctAnswer.toString()];

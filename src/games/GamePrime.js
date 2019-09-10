@@ -1,8 +1,8 @@
 import { getRandomInt, isPrime } from '../lib/mylib';
 
 const getRandomQuestionAndCorrectAnswer = () => {
-  const num = getRandomInt(1, 101);
-  return [num, isPrime(num) ? 'yes' : 'no'];
+  const randomInt = getRandomInt(1, 101);
+  return [randomInt, isPrime(randomInt) ? 'yes' : 'no'];
 };
 
 const gameData = {
