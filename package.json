@@ -2,7 +2,6 @@
   "name": "frontend-project-lvl1-deputatovn",
   "version": "7.0.0",
   "description": "frontend project brain games",
-  "main": "src/bin/index.js",
   "bin": {
     "brain-games": "dist/bin/brain-games.js",
     "brain-even": "dist/bin/brain-even.js",
