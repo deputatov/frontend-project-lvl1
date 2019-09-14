@@ -1,22 +1,27 @@
 import { getRandomInt } from '../lib/mylib';
+import startGame from '..';
 
 const getRandomQuestionAndCorrectAnswer = () => {
-  const minOperationIndex = 0;
-  const maxOperationIndex = 3;
-  const indRandomOperation = getRandomInt(minOperationIndex, maxOperationIndex);
+  const randomNumber1 = getRandomInt(0, 20);
+  const randomNumber2 = getRandomInt(0, 20);
 
-  const minValue = 0;
-  const maxValue = 20;
-  const randomInt1 = getRandomInt(minValue, maxValue);
-  const randomInt2 = getRandomInt(minValue, maxValue);
+  const arithmeticOperations = {
+    '+': (val1, val2) => val1 + val2,
+    '-': (val1, val2) => val1 - val2,
+    '*': (val1, val2) => val1 * val2,
+  };
 
-  const operations = [
-    [`${randomInt1} + ${randomInt2}`, (randomInt1 + randomInt2).toString()],
-    [`${randomInt1} - ${randomInt2}`, (randomInt1 - randomInt2).toString()],
-    [`${randomInt1} * ${randomInt2}`, (randomInt1 * randomInt2).toString()],
-  ];
+  const mathSigns = Object.keys(arithmeticOperations);
 
-  return operations[indRandomOperation];
+  const randomMathSign = mathSigns[
+    Math.floor(Math.random() * mathSigns.length)];
+
+  const gameQuestion = `${randomNumber1} ${randomMathSign} ${randomNumber2}`;
+
+  const correctAnswer = arithmeticOperations[
+    randomMathSign](randomNumber1, randomNumber2).toString();
+
+  return [gameQuestion, correctAnswer];
 };
 
 const gameData = {
@@ -24,4 +29,6 @@ const gameData = {
   getQuestionAnswer: getRandomQuestionAndCorrectAnswer,
 };
 
-export default gameData;
+const startGameCalc = () => startGame(gameData);
+
+export default startGameCalc;

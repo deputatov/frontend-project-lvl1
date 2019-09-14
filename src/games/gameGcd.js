@@ -1,22 +1,19 @@
 import { getRandomInt } from '../lib/mylib';
+import startGame from '..';
 
-const gcd = (a, b) => {
+const getGreatestCommonDivisor = (a, b) => {
   if (b === 0) {
     return a;
   }
-  return gcd(b, a % b);
+  return getGreatestCommonDivisor(b, a % b);
 };
 
 const getRandomQuestionAndCorrectAnswer = () => {
-  const minValue1 = 40;
-  const maxValue1 = 50;
-  const randomInt1 = getRandomInt(minValue1, maxValue1);
+  const randomNumber1 = getRandomInt(40, 50);
+  const randomNumber2 = getRandomInt(5, 20);
 
-  const minValue2 = 5;
-  const maxValue2 = 20;
-  const randomInt2 = getRandomInt(minValue2, maxValue2);
-
-  return [`${randomInt1} ${randomInt2}`, gcd(randomInt1, randomInt2).toString()];
+  return [`${randomNumber1} ${randomNumber2}`,
+    getGreatestCommonDivisor(randomNumber1, randomNumber2).toString()];
 };
 
 const gameData = {
@@ -24,4 +21,6 @@ const gameData = {
   getQuestionAnswer: getRandomQuestionAndCorrectAnswer,
 };
 
-export default gameData;
+const startGameGcd = () => startGame(gameData);
+
+export default startGameGcd;

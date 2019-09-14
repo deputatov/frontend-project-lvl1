@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-const maxNumberOfQuestions = 3;
+const questionsCount = 3;
 
 export default (gameData) => {
   console.log('Welcome to the Brain Games!');
@@ -8,19 +8,21 @@ export default (gameData) => {
   const playerName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${playerName}!\n`);
 
-  const askAQuestion = (questionsCount) => {
-    if (questionsCount === 0) {
-      return console.log(`Congratulations, ${playerName}!`);
+  const askAQuestion = (counter) => {
+    if (counter === 0) {
+      console.log(`Congratulations, ${playerName}!`);
+      return true;
     }
     const [randomQuestion, correctAnswer] = gameData.getQuestionAnswer();
     console.log(`Question: ${randomQuestion}`);
     const playerAnswer = readlineSync.question('Your answer: ');
     if (playerAnswer === correctAnswer) {
       console.log('Correct!');
-      return askAQuestion(questionsCount - 1);
+      return askAQuestion(counter - 1);
     }
-    return console.log(`'${playerAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${playerName}!'`);
+    console.log(`'${playerAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${playerName}!'`);
+    return false;
   };
 
-  askAQuestion(maxNumberOfQuestions);
+  askAQuestion(questionsCount);
 };

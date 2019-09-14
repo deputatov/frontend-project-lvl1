@@ -1,8 +1,21 @@
-import { getRandomInt, isPrime } from '../lib/mylib';
+import { getRandomInt } from '../lib/mylib';
+import startGame from '..';
+
+export const isPrime = (num) => {
+  if (num < 2) {
+    return false;
+  }
+  for (let i = 2; i < num; i += 1) {
+    if (num % i === 0) {
+      return false;
+    }
+  }
+  return true;
+};
 
 const getRandomQuestionAndCorrectAnswer = () => {
-  const randomInt = getRandomInt(1, 101);
-  return [randomInt, isPrime(randomInt) ? 'yes' : 'no'];
+  const gameQuestion = getRandomInt(1, 100);
+  return [gameQuestion, isPrime(gameQuestion) ? 'yes' : 'no'];
 };
 
 const gameData = {
@@ -10,4 +23,6 @@ const gameData = {
   getQuestionAnswer: getRandomQuestionAndCorrectAnswer,
 };
 
-export default gameData;
+const startGamePrime = () => startGame(gameData);
+
+export default startGamePrime;

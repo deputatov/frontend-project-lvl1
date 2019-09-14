@@ -1,10 +1,11 @@
-import { getRandomInt, isEven } from '../lib/mylib';
+import { getRandomInt } from '../lib/mylib';
+import startGame from '..';
+
+export const isEven = (num) => num % 2 === 0;
 
 const getRandomQuestionAndCorrectAnswer = () => {
-  const minValue = 0;
-  const maxValue = 100;
-  const randomInt = getRandomInt(minValue, maxValue);
-  return [randomInt, isEven(randomInt) ? 'yes' : 'no'];
+  const gameQuestion = getRandomInt(0, 100);
+  return [gameQuestion, isEven(gameQuestion) ? 'yes' : 'no'];
 };
 
 const gameData = {
@@ -12,4 +13,6 @@ const gameData = {
   getQuestionAnswer: getRandomQuestionAndCorrectAnswer,
 };
 
-export default gameData;
+const startEvenOddGame = () => startGame(gameData);
+
+export default startEvenOddGame;
