@@ -1,6 +1,6 @@
 {
   "name": "frontend-project-lvl1-deputatovn",
-  "version": "8.0.1",
+  "version": "9.0.0",
   "description": "frontend project brain games",
   "bin": {
     "brain-games": "dist/bin/brain-games.js",
