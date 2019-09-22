@@ -1,5 +1,5 @@
-import randomInt from '../lib/randomInt';
-import startGame from '..';
+import getRandomInt from '../lib/mylib';
+import playGame from '..';
 
 const description = 'Find the greatest common divisor of given numbers.\n';
 
@@ -11,11 +11,11 @@ const getGreatestCommonDivisor = (a, b) => {
 };
 
 const getQuestionAnswer = () => {
-  const number1 = randomInt(40, 50);
-  const number2 = randomInt(5, 20);
+  const number1 = getRandomInt(40, 50);
+  const number2 = getRandomInt(5, 20);
   const gameQuestion = `${number1} ${number2}`;
   const correctAnswer = getGreatestCommonDivisor(number1, number2).toString();
   return [gameQuestion, correctAnswer];
 };
 
-export default () => startGame(description, getQuestionAnswer);
+export default () => playGame(description, getQuestionAnswer);

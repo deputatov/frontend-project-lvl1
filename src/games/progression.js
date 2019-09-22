@@ -1,20 +1,22 @@
-import randomInt from '../lib/randomInt';
-import startGame from '..';
+import getRandomInt from '../lib/mylib';
+import playGame from '..';
 
 const description = 'What number is missing in the progression?\n';
 
-const getSequenceOfNumbers = (filler, inc, len = 10) => Array(len)
+const progressionLength = 10;
+
+const getSequence = (filler, increment, length) => Array(length)
   .fill(filler)
-  .map((val, ind) => val + inc * ind);
+  .map((value, index) => value + increment * index);
 
 const getQuestionAnswer = () => {
-  const filler = randomInt(1, 10);
-  const increment = randomInt(1, 7);
-  const sequence = getSequenceOfNumbers(filler, increment);
-  const gapIndex = randomInt(0, sequence.length - 1);
+  const filler = getRandomInt(1, 10);
+  const increment = getRandomInt(1, 7);
+  const sequence = getSequence(filler, increment, progressionLength);
+  const gapIndex = getRandomInt(0, sequence.length - 1);
   const correctAnswer = sequence[gapIndex];
   sequence[gapIndex] = '..';
   return [sequence.join(' '), correctAnswer.toString()];
 };
 
-export default () => startGame(description, getQuestionAnswer);
+export default () => playGame(description, getQuestionAnswer);
