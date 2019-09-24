@@ -1,7 +1,7 @@
-import getRandomInt from '../lib/mylib';
+import getRandomInt from '../utils';
 import playGame from '..';
 
-const description = 'Find the greatest common divisor of given numbers.\n';
+const description = 'Find the greatest common divisor of given numbers.';
 
 const getGreatestCommonDivisor = (a, b) => {
   if (b === 0) {

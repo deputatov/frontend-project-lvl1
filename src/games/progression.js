@@ -1,7 +1,7 @@
-import getRandomInt from '../lib/mylib';
+import getRandomInt from '../utils';
 import playGame from '..';
 
-const description = 'What number is missing in the progression?\n';
+const description = 'What number is missing in the progression?';
 
 const progressionLength = 10;
 

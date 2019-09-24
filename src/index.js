@@ -4,7 +4,7 @@ const questionsCount = 3;
 
 const playGame = (description, questionAndAnswer) => {
   console.log('Welcome to the Brain Games!');
-  console.log(description);
+  console.log(`${description}\n`);
   const playerName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${playerName}!\n`);
 

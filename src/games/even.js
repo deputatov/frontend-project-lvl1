@@ -1,7 +1,7 @@
-import getRandomInt from '../lib/mylib';
+import getRandomInt from '../utils';
 import playGame from '..';
 
-const description = 'Answer "yes" if number even otherwise answer "no".\n';
+const description = 'Answer "yes" if number even otherwise answer "no".';
 
 const isEven = (number) => number % 2 === 0;
 

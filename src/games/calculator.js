@@ -1,7 +1,7 @@
-import getRandomInt from '../lib/mylib';
+import getRandomInt from '../utils';
 import playGame from '..';
 
-const description = 'What is the result of the expression?\n';
+const description = 'What is the result of the expression?';
 
 const arithmeticOperations = {
   '+': (val1, val2) => val1 + val2,
