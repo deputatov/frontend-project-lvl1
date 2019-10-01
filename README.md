@@ -11,7 +11,7 @@ Mentor [Sergey Karpuk](https://ru.hexlet.io/u/ck)
 
 ```$ sudo npm i -g frontend-project-lvl1-deputatovn```
 
-![Install package](gif/install.gif)
+<p align="center"> <img width=auto height=auto src="gif/install.gif"> </p>
 
 ## Game "Is even number?"
 
@@ -19,7 +19,7 @@ User sees a random number. He needs to answer **yes** if the number is even, or 
 
 run game ```$ brain-even```
 
-![Run game even](gif/even.gif)
+<p align="center"> <img width=auto height=auto src="gif/even.gif"> </p>
 
 ## Game "Calculator"
 
@@ -27,7 +27,7 @@ User sees a random mathematical expression that needs to be calculated and writt
 
 run game ```$ brain-calc```
 
-![Run game calculator](gif/calculator.gif)
+<p align="center"> <img width=auto height=auto src="gif/calculator.gif"> </p>
 
 ## Game "Greatest common divisor"
 
@@ -35,7 +35,7 @@ User sees two random numbers. He must calculate and enter the largest common div
 
 run game ```$ brain-gcd```
 
-![Run game gcd](gif/gcd.gif)
+<p align="center"> <img width=auto height=auto src="gif/gcd.gif"> </p>
 
 ## Game "Arithmetic progression"
 
@@ -43,7 +43,7 @@ User sees a series of numbers forming an arithmetic progression, one of which is
 
 run game ```$ brain-progression```
 
-![Run game progression](gif/progression.gif)
+<p align="center"> <img width=auto height=auto src="gif/progression.gif"> </p>
 
 ## Game "Is prime number?"
 
@@ -51,4 +51,4 @@ User sees a random number. He needs to answer **yes** if the number is prime, or
 
 run game ```$ brain-prime```
 
-![Run game prime](gif/prime.gif)
+<p align="center"> <img width=auto height=auto src="gif/prime.gif"> </p>
